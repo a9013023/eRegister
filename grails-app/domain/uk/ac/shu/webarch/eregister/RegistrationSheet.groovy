@@ -10,11 +10,14 @@ class RegistrationSheet {
 
 	String notes
 
-//****TO DO
-//Add metadata to add a list if RegisterEntry classes for this sheet. 1 sheet has many enteries
+   static hasMany = [
+	regSheet: signatories,
+]
 
-//Will need a property that points back to this RegistrationSheet. Impliment this 1st
+  static mappedBy = [
+	
 
+]
 
     static constraints = {
 	course(nullable:false, blank:false);

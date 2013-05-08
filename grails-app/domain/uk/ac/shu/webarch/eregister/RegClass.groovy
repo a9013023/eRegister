@@ -13,15 +13,10 @@ class RegClass {
 
 	Set enrolledStudents
 
-//*****TO DO
-//Will need hasMany adding for enrolledStudents
-//Will need to be mapped by section so the class knows to use the student property of the enrolled class as a foreign key
 
-	static constraints = [
-]
+	static hasMany = [classes: enrolledStudents]
 
-	static constraints = [
-]
+	static mappedBy = [student: 'student_fk']
 
 
     static constraints = {

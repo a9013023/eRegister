@@ -22,14 +22,17 @@ class Student {
 	courses:'student',
 	classAtts:'student'
 
-//****TO DO
-// make the notes field use the "text" type 
-//make the name column "student_notes" in the database
-
 
     static constraints = {
 	fullStudentName(nullable:false, blank:false,maxsize:256);
 	studentNumber(nullable:false, blank:false,maxsize:256);
     }
+
+
+ static mapping = {
+	notes column: 'notes', type:'text'
+	fullStudentName: 'student_notes'
+	}
+
 }
 
