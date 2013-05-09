@@ -11,14 +11,15 @@ RegistrationSheet regsheet
 
 Long timestamp
 
-    static constraints = {
+   static constraints = {
 	timestamp(nullable:false, blank:false);
     }
+
 
    static mapping = {
 	table 'student_register_entry'
 	student column: 'student_fk'
 	regsheet column: 'reg_sheet_fk'
 	
-	
+}	
 }
